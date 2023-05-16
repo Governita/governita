@@ -1,0 +1,145 @@
+
+header {
+    background-color: #006644;
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+ 
+    text-align: center;
+    transition: 0.5s;
+}
+
+body, html{
+    background-color: #d0f0c0;
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: Georgia, serif;
+    /* font-family: 'marcellus', 'Times', serif; */
+    color: #006644;
+    overflow-x: hidden;
+}
+
+main{
+    background-color: #d0f0c0;
+    height: auto;
+    width: 100%;
+    margin: 200px 0px;
+    padding: 0px;
+    font-family: Georgia, serif;
+    /* font-family: 'marcellus', 'Times', serif; */
+    color: #006644;
+    overflow-x: hidden; 
+    text-align: center; 
+}
+
+hr.full{
+    border-top: 1px solid #006644;
+    width: 100%;
+}
+hr.dots{
+    border-top: 1px dotted #006644;
+    width: 100%;
+}
+
+.responsive {
+    width: 200px;
+    height: auto;
+    transition: 0.5s;
+    padding: 10px;
+}
+
+.main_button{
+    display: block;
+    padding: 10px; 
+    text-align: center;
+    background-color: #ab8900; 
+    color: #ffffbf;
+    border-top: 2px solid #d0f0c0;
+}
+
+.main_button:hover {
+
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #d0f0c0;
+    color:#ab8900;
+    border: 2px solid #ab8900;
+
+}
+
+.products_list{
+    display: block;
+    line-height: 100%;
+    width: 100%;
+    
+}
+.products{
+    list-style-type: none; 
+    text-align:right;
+    line-height: 2; 
+}
+.prices{
+    list-style-type: none; 
+    text-align:left; 
+    line-height: 2;
+}
+
+.box_content {
+
+    display: none;
+    padding: 0px;
+    width: auto;
+    align-items: center;
+    /* background-color: #d0f0c0; */
+    background-color:#ffffbf;
+    border: 2px solid #ab8900;
+    color: #006644; /* 141414; */
+
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    columns: 2;
+}
+
+.box_content:hover {
+
+    display: none;
+    text-align: center;
+    /* background-color: #d0f0c0; */
+    background-color:#ffffbf;
+    border: 2px solid #ab8900;
+    color: #006644; /* 141414; */
+
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px; 
+    columns: 2;
+
+}
+
+
+ul{
+    padding: 10px; 
+    text-decoration: none;
+    text-align: center;
+    margin-right: 0%;
+}
+
+
+
+
+/* 
+ffffbf
+733635
+006442
+d0f0c0
+1b1b1b
+010b13
+141414
+080808
+010203 */

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Governita</title>
+    
+</head>
+<body>
+    <header id="header">
+<!-- 
+        <picture>
+            <source media="(max-width: 750px)" srcset="img/logo-governita-sf.png" type="image/png">
+            <source media="(min-width: 1050px)" srcset="img/logo-governita-sf.png" type="image/png">
+            <img src="img/logo-governita-sf.png" alt="logo">
+        </picture>
+ -->
+        <img id="logo" src="img/logo-governita-sf.png" alt="logo" class="responsive">
+    </header>
+
+
+    <main id="main">
+        <section id="menu">
+            <hr class="full"><hr class="dots">
+            <h2>MENU</h2>
+            <hr class="dots"><hr class="full">
+            <ul style="list-style-type: none;" >
+                <li>
+                    <div class="main_button" onclick="onClick(aperitivos)" >APERITIVOS</div>
+                    <div id="aperitivos" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Couvert</li>
+                                <li>Assados</li>
+                                <li>Guacamole</li>
+                                <li>Humus</li>
+                                <li>Caprese</li>
+                                <li>Brie</li>
+                                <li>Camembert</li>
+                                <li>Folhados</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 2,50</li>
+                                <li>&euro; 5,50</li>
+                                <li>&euro; 3,50</li>
+                                <li>&euro; 3,50</li>
+                                <li>&euro; 4,00</li>
+                                <li>&euro; 5,50</li>
+                                <li>&euro; 6,50</li>
+                                <li>&euro; 4,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="main_button" onclick="onClick(tostas)">TOSTAS</div>
+                    <div id="tostas" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Salmão</li>
+                                <li>Presunto e queijo da serra</li>
+                                <li>Mozzarella</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 8,50</li>
+                                <li>&euro; 6,50</li>
+                                <li>&euro; 5,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="main_button" onclick="onClick(saladas)">SALADAS</div>
+                    <div id="saladas" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Presunto</li>
+                                <li>Atum</li>
+                                <li>Bufala</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 6,50</li>
+                                <li>&euro; 6,50</li>
+                                <li>&euro; 8,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="main_button" onclick="onClick(tabuas)">TÁBUAS</div>
+                    <div id="tabuas" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Queijos</li>
+                                <li>Enchidos</li>
+                                <li>Mista</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 7,50</li>
+                                <li>&euro; 7,50</li>
+                                <li>&euro; 7,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="main_button" onclick="onClick(desserts)">SOBREMESAS</div>
+                    <div id="desserts" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Bolos</li>
+                                <li>Waffle</li>
+                                <li>Frutas Laminadas</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 3,50</li>
+                                <li>&euro; 2,50</li>
+                                <li>&euro; 2,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+        <section id="bebidas"> 
+            <hr class="full"><hr class="dots">
+            <h2>BEBIDAS</h2>
+            <hr class="dots"><hr class="full">
+            <ul style="list-style-type: none;" >
+                <li>
+                    <div class="main_button" onclick="onClick(sumos)">ÁGUA E SUMOS</div>
+                    <div id="sumos" class="box_content">
+                        <div class="products_list" >
+                            <ul class="products">
+                                <li>Água</li>
+                                <li>Chá</li>
+                                <li>Coca</li>
+                            </ul>
+                        </div>
+                        <div class="products_list">
+                            <ul class="prices" >
+                                <li>&euro; 2,50</li>
+                                <li>&euro; 2,50</li>
+                                <li>&euro; 2,50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="main_button" onclick="onClick(CAFETERIA)">CAFETERIA</div>
+                    <div id="CAFETERIA" class="box_content">
+                        <div style="text-indent: jutify;">
+                            teste ---  &euro; 2.50
+    
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const myRequest = new Request("./_edit/drinks.txt");
+        fetch("./_edit/drinks.txt").then(response => response.text()).then(data => {
+                // Do product_list with your product data
+                console.log(data);
+            });
+
+        function read_file(file){
+            fetch("./_edit/drinks.txt").then(response => response.text()).then(data => {
+                // Do product_list with your product data
+                console.log(data);
+            });
+
+        }
+
+              
+/*             function(){
+                var text = document.createElement('div');
+                text.classList.add('products');
+                //text.textContent = file_reader.result;
+                let drinks_area = document.getElementById('drinks');
+                drinks_area.append(text);
+                drinks_area.append('aav');
+
+
+            } */
+            //const reader = require('fs');
+           // const readLine = require('readline');
+            //var r = reader.re
+           // r.on('line', function(lt){
+
+
+
+            //});
+            //fetch('_edit/drinks.txt')
+            // reader.onload = (event)=>{
+            //     const file = event.target.result;
+            //     const lines = file.split(/\r\n | \n/);
+            //     drinks_area.value = line.join('\n');
+            // }
+/* 
+            var text = document.createElement('div');
+            text.classList.add('products');
+            text.textContent = reader.readAsText(file.textContent);
+            let drinks_area = document.getElementById('drinks');
+            drinks_area.append(text);
+ */
+
+
+        
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                document.getElementById("header").style.height = "100px";
+                document.getElementById("logo").style.width = "110px";
+                document.getElementById("main").style.marginTop = "200px";
+
+                //document.getElementById("header_holder").style.textAlign = "left";
+                
+            } else {
+                document.getElementById("header").style.height = "200px";
+                document.getElementById("logo").style.width = "220px";
+                document.getElementById("main").style.marginTop = "200px";
+
+
+            }
+        }
+        function onClick(item){
+            if(item.style.display == 'block'){
+                item.style.display = 'none';
+                item.
+                
+                read_file("_edit/drinks.txt");
+            }else{
+                item.style.display = 'block';
+            }
+        }
+    </script>
+
+    <!-- <hr>
+    <h1>
+        <p>
+            &lt; 
+            &reg;
+            &copy;
+            &#x1F596;
+            <img src="img/logo-governita-1024x773.jpg" alt="">
+        </p>
+    </h1>
+
+    <p>
+        <pre>
+            teste 
+            width 
+                e
+        </pre>
+    </p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="img/favicon.png" type="image/png">
+        <source media="(min-width: 1050px)" srcset="img/favicon.png" type="image/png">
+        <img src="img/favicon.png" alt="logo">
+    </picture> -->
+
+</body>
+
+</html>

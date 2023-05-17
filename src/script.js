@@ -21,11 +21,9 @@ function scrollFunction() {
 function onClick(item){
     if(item.style.display == 'block'){
         item.style.display = 'none';
-        this.style.backgroundColor = '#ab8900';
     }else{
         request(item);
         item.style.display = 'block';
-        this.style.backgroundColor = '#ab8900';
     }
 }
  

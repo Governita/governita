@@ -21,16 +21,16 @@ function scrollFunction() {
 function onClick(item){
     if(item.style.display == 'block'){
         item.style.display = 'none';
+        this.style.backgroundColor = '#ab8900';
     }else{
         request(item);
         item.style.display = 'block';
+        this.style.backgroundColor = '#ab8900';
     }
 }
  
 function request(item){
     item.innerHTML = "";
-
-    const output = document.querySelector('.output');
     const url = 'https://docs.google.com/spreadsheets/d/';
     const ssid = '1G4p_2e8SEiZykeXgDC0C5DK53x3DTRWbuaJHvWuyYrM';
     const q1 = '/gviz/tq?';
@@ -40,10 +40,8 @@ function request(item){
     const q4 = encodeURIComponent(q);
     //const q4 = 'Select%20*%20WHERE%20A%20%3D%22Tostas%22';
 
-
     const endpoint1 = `${url}${ssid}${q1}&${q2}&${q3}&tq=${q4}`;
 
-    output.textContent = endpoint1;
 
     fetch(endpoint1)
     .then(res => res.text())
@@ -93,10 +91,7 @@ function request(item){
             new_row.append(pd);
             new_row.append(price);
 
-
-            output.append(new_row);
             item.append(new_row);
-
 
 
             /*

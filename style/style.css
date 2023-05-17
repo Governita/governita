@@ -103,7 +103,7 @@ hr.dots{
     border-radius: 2px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    columns: 2;
+    /* columns: 2; */
 }
 
 .box_content:hover {
@@ -118,7 +118,7 @@ hr.dots{
     border-radius: 2px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px; 
-    columns: 2;
+    /* columns: 2; */
 
 }
 
@@ -131,8 +131,39 @@ ul{
 }
 
 
+.box{
+    display:inline-block;
+    width: 25%;
+    text-align: center;
+}
 
+.row{
+    padding: 10px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+    /* width: 100%; */
+}
+.column{
+    display: block;
+    float: left;
+    width: 50%;
+}
 
+.description{
+    word-wrap: break-word;
+    font-size: x-small;
+}
+
+@media(hover:hover){
+    
+}
+
+@media(hover:none){
+    
+}
 /* 
 ffffbf
 733635

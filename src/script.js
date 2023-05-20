@@ -1,6 +1,6 @@
-//https://docs.google.com/spreadsheets/d/1G4p_2e8SEiZykeXgDC0C5DK53x3DTRWbuaJHvWuyYrM/edit?usp=sharing
 
 window.onscroll = function() {scrollFunction()};
+window.onload = function() {load()};
 function scrollFunction() {
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
         document.getElementById("header").style.height = "100px";
@@ -18,11 +18,19 @@ function scrollFunction() {
     }
 }
 
+function load(){
+    const list = [aperitivos, tostas, piadinas, saladas, tabuas, sobremesas, agua_sumos, cafeteria, vinhos, cervejas, cocktails, espirituosas];
+    list.forEach( element =>{
+        let item = document.getElementById(element);
+        request(element);
+    })
+}
+
 function onClick(item){
     if(item.style.display == 'block'){
         item.style.display = 'none';
     }else{
-        request(item);
+        //request(item);
         item.style.display = 'block';
     }
 }
@@ -30,7 +38,8 @@ function onClick(item){
 function request(item){
     item.innerHTML = "";
     const url = 'https://docs.google.com/spreadsheets/d/';
-    const ssid = '1G4p_2e8SEiZykeXgDC0C5DK53x3DTRWbuaJHvWuyYrM';
+    const ssid = '12DfFGnumxEpjz99TZq9CHpZBsPVULcH_KExm8-oI8ck'
+    //const ssid = '1G4p_2e8SEiZykeXgDC0C5DK53x3DTRWbuaJHvWuyYrM';
     const q1 = '/gviz/tq?';
     const q2 = 'tqx=out:json';
     const q3 = 'sheet=Menu';

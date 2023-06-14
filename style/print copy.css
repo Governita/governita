@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Estilo impresso */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    /* display: block; */
+}
+
+header {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    background-color: #660000;
+    text-align: center;
+    border: 2px solid #ab8900;
+
+}
+.responsive{
+    display: block;
+    margin: auto;
+    padding: auto;
+    height: 25%;
+    width: auto;
+    border: 2px solid #ab0000;
+
+}
+
+html{
+    margin: auto;
+    padding: auto;
+    background-color: #d0f0c0;
+    /* width: 100%; */
+    font-family: Georgia, serif;
+    color: #006644;
+    /* overflow-x: hidden; */
+}
+
+body{
+
+    border: 2px solid #ab8900;
+
+}
+main{
+    margin: 10px;
+    padding: 10px;
+
+    border: 2px solid #ab8900;
+
+    /* height: auto; */
+    width: auto;
+    color: #006644;
+    /* overflow-x: hidden;  */
+    text-align: center; 
+}
+/* #menu_list{
+    columns: 2;
+} */
+
+hr.full{
+    border-top: 1px solid #006644;
+    width: 100%;
+}
+hr.dots{
+    border-top: 1px dotted #006644;
+    width: 100%;
+}
+
+
+
+.main_button{
+    padding: 10px; 
+    text-align: center;
+    background-color: #ab8900; 
+    color: #ffffbf;
+    border-top: 2px solid #d0f0c0;
+}
+.box_content {
+
+    display: block;
+    padding: 0px;
+    width: auto;
+    align-items: center;
+    /* background-color: #d0f0c0; */
+    background-color:#ffffbf;
+    border: 2px solid #ab8900;
+    color: #006644; /* 141414; */
+
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* columns: 2; */
+}
+
+ul{
+    padding: 10px; 
+    text-decoration: none;
+    text-align: center;
+    margin-right: 0%;
+}
+
+
+.box{
+    display:inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+.row{
+    padding: 10px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+    /* width: 100%; */
+}
+.column{
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.description{
+    word-wrap: break-word;
+    font-size: x-small;
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* Estilo impresso */
+
+*:not(title){
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    border: 2px solid #ab8900;
+    display: block;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+
+    border: 2px solid #ab0000;
+}
+
+.main_button{
+
+    background-color: #ab8900; 
+    border-top: 2px solid #d0f0c0;
+}
+
+.responsive{
+
+    margin: 10px;
+    padding: 10px;
+    height: 90px;
+    width:auto;
+    text-align: center;
+    border: 2px solid #53ab00;
+
+}
+
+.box_content {
+
+    display: block;
+    padding: 0px;
+    width: auto;
+    align-items: center;
+    /* background-color: #d0f0c0; */
+    background-color:#ffffbf;
+    border: 2px solid #ab8900;
+    color: #006644; /* 141414; */
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    /* columns: 2; */
+}
+
+ul{
+    padding: 10px; 
+    text-decoration: none;
+    text-align: center;
+    margin-right: 0%;
+}
+.box{
+    display:inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+
+.row{
+    padding: 10px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+    /* width: 100%; */
+} 
+.column{
+    display: block;
+    float: left;
+    width: 50%;
+} 
+.description{
+    word-wrap: break-word;
+    font-size: x-small;
+}
+

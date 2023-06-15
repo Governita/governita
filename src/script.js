@@ -5,6 +5,7 @@ window.onload = function() {load()};
 function scrollFunction() {
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
         document.getElementById("header").style.height = "100px";
+        document.getElementById("logo").style.height = "100px";
         document.getElementById("img_logo").style.width = "110px";
         document.getElementById("main").style.marginTop = "200px";
 
@@ -12,6 +13,7 @@ function scrollFunction() {
         
     } else {
         document.getElementById("header").style.height = "200px";
+        document.getElementById("logo").style.height = "200px";
         document.getElementById("img_logo").style.width = "220px";
         document.getElementById("main").style.marginTop = "200px";
 
@@ -168,9 +170,14 @@ function request_button(item, text_column){
             box.style.display = 'none';
             if (text_column == 2){
                 request_item(box, 3);
+                document.getElementById("english").style.display = 'none';
+                document.getElementById("portuguese").style.display = 'block';
+
 
             }else if(text_column == 3){
                 request_item(box, 5);
+                document.getElementById("english").style.display = 'block';
+                document.getElementById("portuguese").style.display = 'none';
             }
 
             new_li.append(button);

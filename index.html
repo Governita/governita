@@ -13,7 +13,15 @@
 </head>
 <body>
     <header id="header">
-        <img id="logo" src="img/logo-governita-sf.png" alt="logo" class="responsive">
+        <div id="logo">
+            <img id="img_logo" src="img/logo-governita-sf.png" alt="logo" class="responsive">
+        </div>
+
+        <div id = "language_selector">
+            <div class="language" onclick="request_button('bebidas',2); request_button('menu',2);">PT</div>
+            <div style=" display:inline-block;"> | </div>
+            <div class="language" onclick="request_button('bebidas',3); request_button('menu',3);">EN</div>
+        </div>
     </header>
     <main id="main">
         <section id="menu">

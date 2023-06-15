@@ -5,14 +5,14 @@ window.onload = function() {load()};
 function scrollFunction() {
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
         document.getElementById("header").style.height = "100px";
-        document.getElementById("logo").style.width = "110px";
+        document.getElementById("img_logo").style.width = "110px";
         document.getElementById("main").style.marginTop = "200px";
 
         //document.getElementById("header_holder").style.textAlign = "left";
         
     } else {
         document.getElementById("header").style.height = "200px";
-        document.getElementById("logo").style.width = "220px";
+        document.getElementById("img_logo").style.width = "220px";
         document.getElementById("main").style.marginTop = "200px";
 
 
@@ -30,8 +30,9 @@ function onClick(item){
 }
  
 function load(){
-    request_button("menu");
-    request_button("bebidas");
+    request_button("menu",2);
+    request_button("bebidas",2);
+    //2 para PT, 3 para EN
 
     // list.forEach( element =>{
        //let item = document.getElementById(element);
@@ -39,7 +40,7 @@ function load(){
    // })
 }
 
-function request_item(item){
+function request_item(item, text_column){
     item.innerHTML = "";
     const url = 'https://docs.google.com/spreadsheets/d/';
     const ssid = '12DfFGnumxEpjz99TZq9CHpZBsPVULcH_KExm8-oI8ck'
@@ -50,7 +51,6 @@ function request_item(item){
     let q = 'Select * WHERE B ="'+item.id+'"';
     const q4 = encodeURIComponent(q);
     //const q4 = 'Select%20*%20WHERE%20A%20%3D%22Tostas%22';
-
 
     const endpoint1 = `${url}${ssid}${q1}&${q2}&${q3}&tq=${q4}`;
 
@@ -83,20 +83,20 @@ function request_item(item){
             description.classList.add('description');
 
 
-            if ( element.c[2] != null){
-                product.textContent = element.c[2].v;
+            if ( element.c[text_column] != null){
+                product.textContent = element.c[text_column].v;
             }else{
                 product.textContent = "";
             }
 
-            if ( element.c[3] != null){
-                price.textContent = "\u20AC "+element.c[3].v;
+            if ( element.c[2] != null){
+                price.textContent = "\u20AC "+element.c[2].v;
             }else{
                 price.textContent = "";
             }
 
-            if ( element.c[4] != null){
-                description.textContent = element.c[4].v;
+            if ( element.c[text_column+1] != null){
+                description.textContent = element.c[text_column+1].v;
 
             }else{
                 description.textContent = "";
@@ -127,8 +127,8 @@ function request_item(item){
     })
 }
 
-function request_button(item){
-   // item.innerHTML = "";
+function request_button(item, text_column){
+    //item.innerHTML = "";
     const url = 'https://docs.google.com/spreadsheets/d/';
     const ssid = '12DfFGnumxEpjz99TZq9CHpZBsPVULcH_KExm8-oI8ck'
     //const ssid = '1G4p_2e8SEiZykeXgDC0C5DK53x3DTRWbuaJHvWuyYrM';
@@ -141,6 +141,7 @@ function request_button(item){
     const endpoint1 = `${url}${ssid}${q1}&${q2}&${q3}&tq=${q4}`;
 
     let menu_list = document.getElementById(item+"_list");
+    menu_list.innerHTML = "";
     
     fetch(endpoint1)
     .then(res => res.text())
@@ -159,13 +160,18 @@ function request_button(item){
             button.classList.add('main_button');
             button.setAttribute("arg", element.c[1].v);
             button.onclick = function() {onClick(this)};
-            button.textContent = element.c[2].v;
+            button.textContent = element.c[text_column].v;
 
 
             box.id = element.c[1].v;
             box.classList.add('box_content');
             box.style.display = 'none';
-            request_item(box);
+            if (text_column == 2){
+                request_item(box, 3);
+
+            }else if(text_column == 3){
+                request_item(box, 5);
+            }
 
             new_li.append(button);
             new_li.append(box);

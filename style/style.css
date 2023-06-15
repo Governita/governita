@@ -6,9 +6,39 @@ header {
     width: 100%;
     margin: 0px;
     padding: 0px;
- 
-    text-align: center;
     transition: 0.5s;
+}
+#logo{
+
+    position: fixed;
+    height: 200px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#language_selector{
+    position:relative;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    left: 75% ;
+    width: 25%;
+    color:  #ab8900;
+}
+
+.language{
+    color:  #ab8900;
+   display: inline-block;
+}
+
+.language:hover{
+    display: inline-block;
+    text-decoration: underline;
+    color:  #d0f0c0;
+
 }
 
 body, html{
@@ -35,6 +65,10 @@ main{
     overflow-x: hidden; 
     text-align: center; 
 }
+
+
+
+
 
 hr.full{
     border-top: 1px solid #006644;
@@ -157,13 +191,13 @@ ul{
     font-size: x-small;
 }
 
-@media(hover:hover){
+/* @media(hover:hover){
     
 }
 
 @media(hover:none){
     
-}
+} */
 /* 
 ffffbf
 733635
